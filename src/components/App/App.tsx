@@ -1,5 +1,5 @@
 import SearchBar from "../SearchBar/SearchBar";
-import type { Movie } from "../../../types/movie";
+import type { Movie } from "../../types/movie";
 import fetchMovies from "../services/movieService";
 import { Toaster, toast } from "react-hot-toast";
 import MovieGrid from "../MovieGrid/MovieGrid";
