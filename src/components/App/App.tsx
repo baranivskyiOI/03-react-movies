@@ -5,7 +5,7 @@ import { Toaster, toast } from "react-hot-toast";
 import MovieGrid from "../MovieGrid/MovieGrid";
 import { useState } from "react";
 import Loader from "../Loader/Loader";
-import ErrorMessage from "../ErrorMassage/ErrorMassege";
+import ErrorMessage from "../ErrorMessage/ErrorMassege";
 import MovieModal from "../MovieModal/MovieModal";
 
 interface MoviesHTTPResponse {
