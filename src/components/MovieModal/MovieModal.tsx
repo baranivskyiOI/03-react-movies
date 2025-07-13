@@ -17,6 +17,7 @@ interface MovieModalProps {
 
 export default function MovieModal({ movie, onClose }: MovieModalProps) {
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         onClose();
@@ -25,9 +26,10 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
+      document.body.style.overflow = "auto";
       document.removeEventListener("keydown", handleKeyDown);
     };
-  });
+  }, [onClose]);
 
   return (
     <div className={css.backdrop} role="dialog" aria-modal="true">
@@ -41,7 +43,7 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
         </button>
         <img
           src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-          alt="{movie.title}"
+          alt={movie.title}
           className={css.image}
         />
         <div className={css.content}>
