@@ -6,7 +6,7 @@ import { useState } from "react";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import MovieModal from "../MovieModal/MovieModal";
-import MovieServiceResponse from "../../services/movieService";
+import { fetchMoviesByQuery } from "../../services/movieService";
 
 const errorNotify = () => {
   toast.error("No movies found for your request.");
@@ -23,7 +23,7 @@ function App() {
       setIsError(false);
       setIsLoading(true);
 
-      const movieList: Movie[] = await MovieServiceResponse(query);
+      const movieList: Movie[] = await fetchMoviesByQuery(query);
 
       if (!movieList.length) {
         errorNotify();

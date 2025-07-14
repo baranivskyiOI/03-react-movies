@@ -13,7 +13,7 @@ const fetchMovies = axios.create({
   },
 });
 
-export default async function MovieServiceResponse(query:string) {
+export async function fetchMoviesByQuery(query:string): Promise<Movie[]> {
         const response = await fetchMovies.get<MoviesHTTPResponse>(
         `/search/movie`,
         {
