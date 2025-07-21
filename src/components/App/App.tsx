@@ -6,7 +6,7 @@ import { useState } from "react";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import MovieModal from "../MovieModal/MovieModal";
-import { fetchMoviesByQuery } from "../../services/movieService";
+import fetchMoviesByQuery from "../../services/movieService";
 
 const errorNotify = () => {
   toast.error("No movies found for your request.");
