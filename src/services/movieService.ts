@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiKey = import.meta.env.VITE_TMDB_TOKEN;
+const apiKey = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTM3NmFlMzc1OTAzYzlmYjY2Mjk3YTliZDM2YzE2MSIsIm5iZiI6MTc1MTk5OTgxOS44MjQsInN1YiI6IjY4NmQ2NTRiOTAwYTdiY2NjNGVkNWZkNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NRcVj8POuaQoGo5hCwxqx9MzGwuq9xOLP1KNfJfrkIU;
 import type { Movie } from "../types/movie";
 
 interface MoviesHTTPResponse {
